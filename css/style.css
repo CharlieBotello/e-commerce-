@@ -7,13 +7,17 @@ body {
     font-size: 17px;
     box-sizing: border-box;
 }
+
+/*--navbar--*/
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: grey;
     font-family: Arial, Helvetica, sans-serif;
+
 
 }
 
+	
 .navbar a {
     float: left;
     font-size: 16px;
@@ -71,32 +75,72 @@ body {
     display: block;
 }
 
+/*-Main Image---*/
+.main-image-container {
 
-.main-container {
-    position: relative;
-    max-width: 1440px;
-    margin: 0 auto;
+    background-position: center;
+	background-size: cover;
+	background-image: url('../images/main-shoes.png');
+	height: 400px;
+	color: white;
 }
 
-.main-container img {vertical-align: middle;}
 
-.main-container .content {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
-    color: #f1f1f1;
-    width: 100%;
-    padding: 0px;
+
+.main-image {
+	
+	text-align: center;
+	padding:50px;
+	
 }
+
+
+
+/* store item main  */
+.store-item-row{
+	width: 95%;
+	margin: auto;
+	padding-left: 15px;
+	max-height: 100px;
+
+}
+.store-item-column img {
+	width:100%;
+	height: auto;
+	}
+
+.store-item-column {
+    float: left;
+    width: 33.33%;
+    padding: 30px;
+    box-sizing: border-box;
+	height: 33.3%;
+	
+}
+
+/* Clearfix (clear floats) */
+.store-item-row::after {
+    content: "";
+    clear: both;
+    display: table;
+	
+    
+   
+}
+
+
+/* End of store item main  */
+
 
 .items-column {
     float: left;
     width: 33.33%;
-    padding: 10px;
+    padding-top: 100px;
     height: 300px; /* Should be removed. Only for demonstration */
     box-sizing: border-box;
 
 }
+
 
 /* Clear floats after the columns */
 .items-row:after {
@@ -108,10 +152,11 @@ body {
 
 
 /* Float four columns side by side */
-.next-column {
+
+.column{
   float: left;
   width: 50%;
-  padding: 0 10px;
+  padding: 50px;
   box-sizing: border-box;
   height: 300px;
 }
@@ -137,41 +182,30 @@ body {
 }
 
 
+/* Style the counter cards */
 
 
-.store-item-column {
-    float: left;
-    width: 33.33%;
-    padding: 30px;
-    box-sizing: border-box;
+
+/* Sign countainer */
+
+#sign-column-1 {
+	margin-right: 10%;
+	width: 60%;
+	height: 400px;
+	float: left;
+	background-image: url(../images/shoes-next.jpg);
+	background-size: cover;
 }
 
-/* Clearfix (clear floats) */
-.store-item-row::after {
-    content: "";
-    clear: both;
-    display: table;
-    
-   
+#sign-column-2 {
+	margin:auto; 
+	width: 30%;
+	height: 200px;
+	float: left;
+	background-color: #dededed9;
 }
 
 
-
-<h2>Responsive "Side-by-Side" Images</h2>
-<p>How to create side-by-side images with the CSS float property. On screens that are 500px wide or less, the images will stack on top of each other instead of next to each other:</p>
-<p>Resize the browser window to see the effect.</p>
-
-<div class="store-item-row">
-  <div class="store-item-column">
-    <img src="img_snow.jpg" alt="Snow" style="width:100%">
-  </div>
-  <div class="store-item-column">
-    <img src="img_forest.jpg" alt="Forest" style="width:100%">
-  </div>
-  <div class="store-item-column">
-    <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
-  </div>
-</div>
 
 
 /* On smaller screens, decrease text size */
@@ -197,5 +231,12 @@ body {
         width: 100%;
     }
 }
+/*
+@media screen and (max-width: 730px) {
+    .image-right {
+        width: 100%;
+    }
+} 
+\*
 
 
